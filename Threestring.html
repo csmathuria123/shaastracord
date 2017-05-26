@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>js file</title>
+</head>
+<body>
+	<div id="demo" style="font-size: 20px; background-color:#6600ff; width: 200px;
+		height: 80px; padding: 10px; border:2px solid green; border-radius: 8px; position: relative; top: 250px; left: 600px; " >Now start seeing javascript magic by clicking on  Button given below
+	</div>
+	<button onclick="myFunction()" style="position: relative; top: 270px; left: 610px; width: 200px;">Click on it to see The Magic</button>
+<script type="text/javascript">
+	var myVar;
+
+	function myFunction() {
+    	myVar = setInterval(alertFunc, 3000);
+	}
+
+	function alertFunc() {			
+  		document.getElementById("demo").innerHTML="Hello";
+  		clearInterval(myVar);
+  		secondfunction();
+  		
+
+	}
+	function secondfunction(){
+		myvar=setInterval(secalertFunc,3000);
+	}
+	function secalertFunc(){
+		document.getElementById("demo").innerHTML="Chandrashekhar";
+		clearInterval(myvar);
+		thirdfunction();
+	}
+	function thirdfunction(){
+		myvar=setInterval(thrdalertFunc,3000);
+	}
+	function thrdalertFunc(){
+		document.getElementById("demo").innerHTML="Mathuria";
+		clearInterval(myvar);
+		myFunction();
+	}
+</script>
+</body>
+</html>
