@@ -6,7 +6,9 @@
 </head>
 <body>
 	<div id="demo" style="font-size: 20px; background-color:#6600ff; width: 200px;
-		height: 80px; padding: 10px; border:2px solid green; border-radius: 8px; position: relative; top: 250px; left: 600px; " >Now start seeing javascript magic by clicking on  Button given below
+		height: 80px; padding: 10px; border:2px solid green; border-radius: 8px; position: relative; top: 250px; left: 600px;  
+		text-shadow: 2px 2px green; box-shadow: 10px 10px 5px #ac00e6;" ><b>Now start seeing javascript magic
+		by clicking on  Button given below</b>
 	</div>
 	<button onclick="myFunction()" style="position: relative; top: 270px; left: 610px; width: 200px;">Click on it to see The Magic</button>
 <script type="text/javascript">
@@ -17,7 +19,7 @@
 	}
 
 	function alertFunc() {			
-  		document.getElementById("demo").innerHTML="Hello";
+  		document.getElementById("demo").innerHTML="Welcome to ";
   		clearInterval(myVar);
   		secondfunction();
   		
@@ -27,7 +29,7 @@
 		myvar=setInterval(secalertFunc,3000);
 	}
 	function secalertFunc(){
-		document.getElementById("demo").innerHTML="Chandrashekhar";
+		document.getElementById("demo").innerHTML="Shaastra 2018";
 		clearInterval(myvar);
 		thirdfunction();
 	}
@@ -35,7 +37,7 @@
 		myvar=setInterval(thrdalertFunc,3000);
 	}
 	function thrdalertFunc(){
-		document.getElementById("demo").innerHTML="Mathuria";
+		document.getElementById("demo").innerHTML="The spirit of Engineering";
 		clearInterval(myvar);
 		myFunction();
 	}
