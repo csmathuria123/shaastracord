@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title> Cube|3D_Animation </title>
+		
+        <style>
+            
+            .face {
+                height: 80px;
+                width: 80px;
+                color: red;
+                background: url('./giphy.jpg') center no-repeat;
+                border: 1px solid black;
+                position: absolute;
+                top: 200px;
+                left: 600px;
+                backface-visibility: hidden;                
+            }
+ 
+            #f1{
+                transform-origin: center center -40px;
+                -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+                -webkit-animation: rotate_cube1 10s infinite;
+            }
+
+            #f2{
+                transform-origin: center center -40px;                    
+                -webkit-transform: rotateY(90deg) rotateX(0deg) rotateZ(0deg); 
+                -webkit-animation: rotate_cube2 10s infinite;
+                
+            }
+            
+            #f3 {
+                transform-origin: center center -40px;                    
+                -webkit-transform: rotateY(-90deg) rotateX(0deg) rotateZ(0deg); 
+                -webkit-animation: rotate_cube3 10s infinite;
+                
+            }
+            #f4{
+                transform-origin: center center -40px;                    
+                -webkit-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg); 
+                -webkit-animation: rotate_cube4 10s infinite;
+                
+            }
+            #f5{
+                transform-origin: center center -40px;                    
+                -webkit-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); 
+                -webkit-animation: rotate_cube5 10s infinite;
+                
+            }
+            #f6{
+                transform-origin: center center -40px;                    
+                -web+kit-transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg); 
+                -webkit-animation: rotate_cube6 10s infinite;
+                
+            }
+            
+            @-webkit-keyframes rotate_cube1 {
+                0% {
+                    transform-origin: center center -40px;                    
+                    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);                    
+                }                
+                12.5% {
+                    -webkit-transform: rotateY(90deg) rotateX(0deg) rotateZ(0deg);
+                }
+                25% {
+                    -webkit-transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg);                       
+                }
+                37.5% {
+                    -webkit-transform: rotateY(270deg) rotateX(0deg) rotateZ(0deg);                       
+                }  
+                50% {
+                    -webkit-transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg);                       
+                }            
+                62.5% {
+                    -webkit-transform: rotateX(90deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                75% {
+                    -webkit-transform: rotateX(180deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                87.5% {
+                    -webkit-transform: rotateX(270deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                100% {
+                    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+            }
+                
+            @-webkit-keyframes rotate_cube2 {
+                0% {
+                    transform-origin: center center -40px;                    
+                    -webkit-transform: rotateY(90deg) rotateX(0deg) rotateZ(0deg);                    
+                }                
+                12.5% {
+                    -webkit-transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg);
+                }
+                25% {
+                    -webkit-transform: rotateY(270deg) rotateX(0deg) rotateZ(0deg);                       
+                }
+                37.5% {
+                    -webkit-transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg);                       
+                }  
+                50% {
+                    -webkit-transform: rotateY(450deg) rotateX(0deg) rotateZ(0deg);
+                }            
+                62.5% {
+                    -webkit-transform: rotateX(90deg) rotateY(450deg) rotateZ(0deg);                       
+                }
+                75% {
+                    -webkit-transform: rotateX(180deg) rotateY(450deg) rotateZ(0deg);
+                }
+                87.5% {
+                    -webkit-transform: rotateX(270deg) rotateY(450deg) rotateZ(0deg);                       
+                }
+                100% {
+                    -webkit-transform: rotateX(360deg) rotateY(450deg) rotateZ(0deg);        
+                }
+            }
+            
+            @-webkit-keyframes rotate_cube3 {
+                0% {
+                    transform-origin: center center -40px;                    
+                    -webkit-transform: rotateY(-90deg) rotateX(0deg) rotateZ(0deg);                    
+                }                
+                12.5% {
+                    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+                }
+                25% {
+                    -webkit-transform: rotateY(90deg) rotateX(0deg) rotateZ(0deg);                       
+                }
+                37.5% {
+                    -webkit-transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg);                       
+                }  
+                50% {
+                    -webkit-transform: rotateY(270deg) rotateX(0deg) rotateZ(0deg);                       
+                }            
+                62.5% {
+                    -webkit-transform: rotateX(90deg) rotateY(270deg) rotateZ(0deg);                       
+                }
+                75% {
+                    -webkit-transform: rotateX(180deg) rotateY(270deg) rotateZ(0deg);                       
+                }
+                87.5% {
+                    -webkit-transform: rotateX(270deg) rotateY(270deg) rotateZ(0deg);                       
+                }
+                100% {
+                    -webkit-transform: rotateX(360deg) rotateY(270deg) rotateZ(0deg);                       
+                }
+            }
+            
+            @-webkit-keyframes rotate_cube4 {
+                0% {
+                    transform-origin: center center -40px;                    
+                    -webkit-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);                    
+                }                
+                12.5% {
+                    -webkit-transform: rotateY(90deg) rotateX(90deg) rotateZ(0deg);
+                }
+                25% {
+                    -webkit-transform: rotateY(180deg) rotateX(90deg) rotateZ(0deg);                       
+                }
+                37.5% {
+                    -webkit-transform: rotateY(270deg) rotateX(90deg) rotateZ(0deg);                       
+                }  
+                50% {
+                    -webkit-transform: rotateY(360deg) rotateX(90deg) rotateZ(0deg);                       
+                }            
+                62.5% {
+                    -webkit-transform: rotateX(180deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                75% {
+                    -webkit-transform: rotateX(270deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                87.5% {
+                    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                100% {
+                    -webkit-transform: rotateX(450deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+            }
+            
+            @-webkit-keyframes rotate_cube5 {
+                0% {
+                    transform-origin: center center -125px;                    
+                    -webkit-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);                    
+                }                
+                12.5% {
+                    -webkit-transform: rotateX(-90deg) rotateY(90deg) rotateZ(0deg);
+                }
+                25% {
+                    -webkit-transform: rotateX(-90deg) rotateY(180deg) rotateZ(0deg);                       
+                }
+                37.5% {
+                    -webkit-transform: rotateX(-90deg) rotateY(270deg) rotateZ(0deg);                       
+                }  
+                50% {
+                    -webkit-transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);                       
+                }            
+                62.5% {
+                    -webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                75% {
+                    -webkit-transform: rotateX(90deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                87.5% {
+                    -webkit-transform: rotateX(180deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+                100% {
+                    -webkit-transform: rotateX(270deg) rotateY(360deg) rotateZ(0deg);                       
+                }
+            }
+            
+            @-webkit-keyframes rotate_cube6 {
+                0% {
+                    transform-origin: center center -40px;                    
+                    -webkit-transform: rotateY(180deg) rotateX(0deg) rotateZ(0deg);                    
+                }                
+                12.5% {
+                    -webkit-transform: rotateY(270deg) rotateX(0deg) rotateZ(0deg);
+                }
+                25% {
+                    -webkit-transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg);                       
+                }
+                37.5% {
+                    -webkit-transform: rotateY(450deg) rotateX(0deg) rotateZ(0deg);                       
+                }  
+                50% {
+                    -webkit-transform: rotateY(540deg) rotateX(0deg) rotateZ(0deg);                       
+                }            
+                62.5% {
+                    -webkit-transform: rotateX(90deg) rotateY(540deg) rotateZ(0deg);                       
+                }
+                75% {
+                    -webkit-transform: rotateX(180deg) rotateY(540deg) rotateZ(0deg);                       
+                }
+                87.5% {
+                    -webkit-transform: rotateX(270deg) rotateY(540deg) rotateZ(0deg);                       
+                }
+                100% {
+                    -webkit-transform: rotateX(360deg) rotateY(540deg) rotateZ(0deg);                       
+                }
+            }
+            
+        </style>
+    </head>
+    
+    <body>  
+        
+        <div id="f1" class="face"> <b>f1</b> </div>
+        <div id="f2" class="face"> <b>f2</b> </div>
+        <div id="f3" class="face"> <b>f3</b> </div>
+        <div id="f4" class="face"> <b>f4</b> </div>
+        <div id="f5" class="face"> <b>f5</b> </div>
+        <div id="f6" class="face"> <b>f6</b> </div>
+
+    </body>
+</html>
