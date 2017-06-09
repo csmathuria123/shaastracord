@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+			color:  #003399;
+			background-color: #4dffff;
+		}
+		h2{
+			text-align: center;
+			color: 	 #8600b3;
+			 background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
+		}
+	
+		.wrap {
+ 			 margin-top: 150px;
+ 			 perspective: 900px;
+ 			 perspective-origin: 50% 50%; /* a property for 3d transformed elements to change the bottom position of
+ 			 3D elements*/
+		}
+		.cube {
+ 				margin: auto;
+ 				position: relative;
+ 				height: 200px;
+ 				width: 200px;
+ 				transform-style: preserve-3d; /*child element will preserve it's 3d position*/
+		}
+
+		.cube > div {
+ 				 position: absolute;
+  				box-sizing: border-box;
+ 				 padding: 10px;
+ 				 height: 100%;
+ 				 width: 100%;
+ 				 opacity: 1;
+ 				 background: url('./CubeFront.png') center no-repeat;
+ 				 border: solid 1px #eeeeee;
+ 				 color: #ffffff;
+		}
+		.front {
+			  transform: translateZ(100px);
+		}
+
+		.back {
+			  transform: translateZ(-100px) rotateY(180deg);/*since the size of cube is 200px*/
+		}
+
+		.right {
+				 transform: rotateY(-270deg) translateX(100px);
+				  transform-origin: top right;
+		}
+
+		.left {
+  				transform: rotateY(270deg) translateX(-100px);
+  				transform-origin: center left;
+		}
+
+		.top {
+ 				 transform: rotateX(-270deg) translateY(-100px);
+				  transform-origin: top center;
+		}
+
+		.bottom {
+  				transform: rotateX(270deg) translateY(100px);
+  				transform-origin: bottom center;
+		}
+		@keyframes rotate {       /*for spining of the cube*/
+  			from {
+  				  transform: rotateX(0deg) rotateY(0deg);
+  			}
+  
+  			to {
+ 				   transform: rotateX(360deg) rotateY(360deg);
+ 			}
+		}
+
+		.cube {
+  				animation: rotate 10s infinite linear;
+		}
+		.wrap:hover .front {
+  							transform: translateZ(200px);
+		}
+
+		.wrap:hover .back {
+  							transform: translateZ(-200px) rotateY(180deg); /*on hover transformation*/
+		}
+
+		.wrap:hover .right {
+							  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+		}
+
+		.wrap:hover .left {
+  							transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+		}
+
+		.wrap:hover .top {
+  							transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+		}
+
+		.wrap:hover .bottom {
+  							transform: rotateX(270deg) translateZ(100px) translateY(100px);
+		}
+		.cube > div {
+  					transition: transform .5s ease-in; /*To set the opening time of cube*/
+		}
+	</style>
+</head>
+<body>
+<h1>Shaastra The Spirit Of Engineering</h1><hr>
+<h2>Hover Over The Cube It Will Be Opened</h2><hr>
+<div class="wrap">
+	<div class="cube">
+    	<div class="front">
+    	  F1
+    	</div>
+    	<div class="back">
+    	  F2
+    	</div>
+    	<div class="top">
+     	 F3
+    	</div>
+    	<div class="bottom">
+      	F4
+    	</div>
+   		<div class="left">
+      	F5
+    	</div>
+    	<div class="right">
+      	F6
+    	</div>
+	</div>
+</div>
+
+</body>
+</html>
