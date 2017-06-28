@@ -1,101 +1,118 @@
 <!DOCTYPE html>
-<head>
-	<link rel="stylesheet"  type="text/css"  href="bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap-responsive.css">
-	<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>summer school form</title>
-	<style type="text/css">
-		div{
-			position: relative; top:30px; left: 50px;  color:#33ff33;
-		}
-		#State{
-			overflow: scroll;
-		}	
-		#des{
-			width:500px;
-			height: 80px;
-			background-color:  #ff3399;
-			z-index:=-1;
-			border: 1px solid black;
-			border-radius: 5px;
-
-		}
-	</style>	
-</head>
 <html>
-<body  background="them.jpg">
-<marquee  > FILL IT IF WANT TO LEARN SKILLS</marquee> 
-<div id="des">
-	<h1 style="color: black; padding: 10px;">CFI SUMMER SCHOOL</h1>
-</div>
-<div>
-	
-	<form name="myform" method="post" onsubmit="return  validateform()">
-	First Name:<br>
-	
-	<input type="text" name=" firstname" placeholder="your first name" class="col-lg-5 col-sm-9 col-xs-9" required  autofocus><br>
-	<br>
-	Last Name:<br>
-	<input type="text" name="lastname" placeholder="Your last name" required><br>
-	<br>
-	Select Your State:<br>
-	<input type="text" list="State" placeholder="State" >
-	<datalist id="State" >
-		<option value="Tamilnadu">
-		<option value="Telangana">
-		<option value="andhrapradesh">	
-		<option value="kerala">
-		<option value="karnataka">
-		<option value="maharashtra">
-		<option value="odisha">
-		<option value="chattishgarh">
-		<option value="madhyapradesh">
-		<option value="Rajasthan"> 
-		<option value="Punjab">
-		<option value="Hariyana">
-		<option value="Himachal pradesh">
-		<option value="Jharkhand">
-		<option value="Bihar">
-		<option value="Jammu and kashmir">
-		<option value="utterpradesh">
-		<option value="Gujrat">
-	</datalist><br>
+	<head>
+		<title> Bootstrap Form</title>
+		<link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+		<script src="./scripts/jquery-3.2.1.min.js"></script>
+		<script src="./scripts/bootstrap.min.js"></script> 
+	</head>
+	<body background="SoftBlue.jpg" center no-repeat>
+		<div class="container-fluid">
+			<div class="jumbotron">
+				<center><h2>CFI Summer School</h2></center>
+			</div>
+		</div>
+		<div class="container modal-body">
 
-	E-mail:<br>
-	<input type="email" name="mail" placeholder="Enter Your email-Id" required><br>
-
-		<br>
 		
-		
-	Mobile No.:<br>
-	<input type="tel" pattern="[0-9]{10}"  name="telephone" placeholder="Enter Your Mobile-no."  required>
-		<br>
-	Password:
-		<br>
-	<input type="Password"  id="pass" name="password" placeholder="password"   required><br>
-	Confirm Password:<br>
-	<input type="password" name=" password" placeholder="RetypeYourPassword" required><br>
-	
-	
-	<br>
-	<button class="btn btn-info"  >Submit</button> 
+			<form role="form" name="myForm" class="form-horizontal" onsubmit="return  validateForm()" >
+				<div class="form-group has-feedback">
+					<label for="FirstName" class="control-label col-md-4">First Name*:</label>
+					<div class="col-md-6" onblur="mouseout()">
+						<input type="text" class="form-control col-md-6" id="firstname" placeholder="First Name" name="firstname"   required>
+					</div>
+				</div>
 
-	<button class="btn btn-warning"> Reset</button>
-	</form>
-</div>
 
-</body>
-	<script>  
-		function validateform(){  
-			  
-			var password=document.myform.password.value;   
-				if(password.length<6){  
-  				alert("Password must be at least 6 characters long.");  
-  				return false;  
-  				}  
-  				
-		}  
-	</script> 
+				<div class="form-group has-feedback">
+					<label for="last name" class="control-label col-md-4">Last Name*:</label>
+					<div class="col-md-6">
+						<input type="text" class="form-control col-md-6" id="lastname" placeholder="Last Name" name="lastname" required>
+					</div>
+				</div>
+
+
+				<div class="form-group has-feedback">
+					<label for="email" class="control-label col-md-4">Email*:</label>
+					<div class="col-md-6">
+						<input type="email" class="form-control col-md-6" id="email" placeholder="Email" name="email" required >
+					</div>
+				</div>
+
+
+				<div class="form-group has-feedback">
+					<label for="mobileno." class="control-label col-md-4">Mobile No.*:</label>
+					<div class="col-md-6">
+						<input type="tel" pattern="[0-9]{10}" class="form-control col-md-6" id="mobileno." placeholder="MObile No." name="mobileno." required>
+					</div>
+				</div>
+
+
+				<div class="form-group has-feedback">
+					<label for="password" class="control-label col-md-4">Password*:</label>
+					<div class="col-md-6">
+						<input type="password"  class="form-control col-md-6" id="password" placeholder="Password" name="password" required>
+					</div>
+				</div>
+
+
+				<div class="form-group has-feedback">
+					<label for="password" class="control-label col-md-4">Confirm Password*:</label>
+					<div class="col-md-6">
+						<input type="password"  class="form-control col-md-6" id="password" placeholder=" Confirm Password" name="password" required>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+  					<label for="state" class="control-label col-md-4">Select list:</label>
+  					<div class="col-md-6">
+  						<select class="form-control " id="sel1">
+    						<option>Tamilnadu</option>
+    						<option>Telangana</option>
+    						<option>andhrapradesh</option>
+    						<option>maharashtra</option>
+    						<option>odisha</option>
+    						<option>chattishgarh</option>
+    						<option>madhyapradesh</option>
+    						<option>Rajasthan</option>
+    						<option>Punjab</option>
+    						<option>Hariyana</option>
+    						<option>Himachal pradesh</option>
+    						<option>Jharkhand</option>
+    						<option>Bihar</option>
+    						<option>Jammu and kashmir</option>
+    						<option>utterpradesh</option>
+    						<option>Gujrat</option>
+    						<option>Assam</option>
+
+
+ 			 			</select>
+ 			 		</div>
+				</div>
+
+
+
+
+				<div class=" form-group checkbox  ">
+    				<label class="col-md-6 col-md-offset-5 col-xs-offset-2">
+    				<input type="checkbox"> Remember me</label>
+  				</div>
+
+
+
+				<div class="form-group">
+					<button class="btn btn-success col-md-4 col-md-offset-5 col-xs-offset-2" >Submit</button>
+				</div>
+				
+			</form>
+		</div>
+		<div class="container">
+			<label class="label label-warning col-md-12 col-xs-8">
+				<h5>* Field is Requierd</h5>
+			</label>
+		</div>
+
+	</body>
+	 
 </html>
