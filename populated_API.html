@@ -1,163 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Population_of_an_API</title>
-	<meta name="viewport" content="width=device-width,intial-scale=1"/>
+	<script src="angular.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	<script src="bootstrap.min.js"></script>
-	<style type="text/css">
-		table,th,td{
-			border:1px solid black;
-			border-collapse: collapse;
-		}
-		#heading{
-			color:#5c00e6;
-		}
-
-	</style>
 </head>
 <body>
-	<table class="table table-striped">
-		<tr id="heading">
-			<th >User Id</th>
-			<th>Id</th>
-			<th>Title</th>
-			<th>Comment</th>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>1</td>
-			<td><q>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</q></td>
-			<td><q>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</q></td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td><q>qui est esse</q></td>
-			<td><q>est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nul</q></td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>4</td>
-			<td><q>eum et est occaecati</q></td>
-			<td><q>ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit</q></td>
-		</tr>
-		
-		<tr>
-			<td>1</td>
-			<td>3</td>
-			<td><q>ea molestias quasi exercitationem repellat qui ipsa sit aut</q></td>
-			<td><q>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</q></td>
-		</tr>
-		
-		<tr>
-			<td>1</td>
-			<td>5</td>
-			<td><q>nesciunt quas odio</q></td>
-			<td><q>repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque</q></td>
-		</tr>
-		
-		<tr>
-			<td>1</td>
-			<td>6</td>
-			<td><q>dolorem eum magni eos aperiam quia</q></td>
-			<td><q>ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae</q></td>
-		</tr>
-		
-		<tr>
-			<td>1</td>
-			<td>7</td>
-			<td><q>magnam facilis autem</q></td>
-			<td><q>dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas</q></td>
-		</tr>
-		
-		<tr>
-			<td>1</td>
-			<td>8</td>
-			<td><q>dolorem dolore est ipsam</q></td>
-			<td><q>dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae</q></td>
-		</tr>
-		
-		<tr>
-			<td>1</td>
-			<td>9</td>
-			<td><q>nesciunt iure omnis dolorem tempora et accusantium</q></td>
-			<td><q>consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas</q></td>
-		</tr>
-			
-		<tr>
-			<td>1</td>
-			<td>10</td>
-			<td><q>optio molestias id quia eum</q></td>
-			<td><q>quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error</q></td>
-		</tr>
-			
-		<tr>
-			<td>2</td>
-			<td>11</td>
-			<td><q>et ea vero quia laudantium autem</q></td>
-			<td><q>delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>12</td>
-			<td><q>in quibusdam tempore odit est dolorem</q></td>
-			<td><q>itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>13</td>
-			<td><q>dolorum ut in voluptas mollitia et saepe quo animi</q></td>
-			<td><q>aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>14</td>
-			<td><q>voluptatem eligendi optio"</q></td>
-			<td><q>fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>15</td>
-			<td><q>eveniet quod temporibus</q></td>
-			<td><q>reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>16</td>
-			<td><q>sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio</q></td>
-			<td><q>suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>17</td>
-			<td><q>fugit voluptas sed molestias voluptatem provident</q></td>
-			<td><q>eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>18</td>
-			<td><q>voluptate et itaque vero tempora molestiae</q></td>
-			<td><q>eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>19</td>
-			<td><q>adipisci placeat illum aut reiciendis qui</q></td>
-			<td><q>illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas</q></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>20</td>
-			<td><q>doloribus ad provident suscipit at</q></td>
-			<td><q>qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo</q></td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>45</td>
-			<td><q>ut numquam possimus omnis eius suscipit laudantium iure"</q></td>
-			<td><q>est natus reiciendis nihil possimus aut provident\nex et dolor\nrepellat pariatur est\nnobis rerum repellendus dolorem autem</q></td>
-		</tr>
-</table>
+	<div class="container">
+		<div class="jumbotron">
+			<center><h3>API Data</h3></center>
+		</div>
+	</div>
+
+
+
+	<div ng-app="myApp" ng-controller="myCtrl"> 
+
+
+
+		<ul class="list-group">
+  			<li class="list-group-item" ng-repeat="x in myData" >
+    			{{ '"UserID":  '+x.userId+'  | "Id": '+x.id+'  | "Title": '+x.title+' | "BODY":     '+x.body}}
+
+  			</li>
+		</ul>
+
+
+
+
+
+	</div>
+
+
+	<script>
+		var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope, $http) {
+  			$http.get("https://jsonplaceholder.typicode.com/posts")  //http request a page on server
+  			.then(function(response) {
+    
+     	 	$scope.myData=response.data;
+  			});
+		});
+</script>
+
 </body>
 </html>
